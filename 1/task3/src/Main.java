@@ -10,7 +10,7 @@ public class Main {
         System.out.println(str);
         str2 = in.nextLine();
 
-        if (str.indexOf(str2) != -1){
+        if (str.contains(str2)){
             System.out.println("Строка " + str + " содержит строку " + str2);
         }
         else {
