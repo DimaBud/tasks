@@ -1,0 +1,7 @@
+git init //Если инициализируем репозиторий в первый раз
+git add *   // * все файлы или конкретные файлы
+git commit -m "test commit"
+git remote add origin https://github.com/DimaBud/tasks.git  //Если инициализируем репозиторий в первый раз
+git push -u origin master // отправляем коммит в ветку мастер
+
+
