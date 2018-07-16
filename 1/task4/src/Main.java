@@ -16,9 +16,9 @@ public class Main {
         System.out.println(str);
         String[] stringRange = str.split(";");
         Integer[] range = new Integer[2];
-        Integer i = 0;
+        Integer ii = 0;
         for (String strr : stringRange) {
-            range[i++] = Integer.parseInt(strr);
+            range[ii++] = Integer.parseInt(strr);
         }
         System.out.println(Arrays.toString(range));
         if (range[0] > range [1]){
@@ -28,10 +28,10 @@ public class Main {
         }
         System.out.println(Arrays.toString(range));
         Random rand = new Random();
-            for (int i = 0; i < integerLength; i++) {
+            for (Integer j = 0; j < integerLength; j++) {
                 Integer rangeMin = range[0], rangeMax = range[1];
-                integerArray[i] = rangeMin + (rangeMax - rangeMin) * rand.nextInt();
-                System.out.println(integerArray[i]);
+                integerArray[j] = rangeMin + rand.nextInt(rangeMax - rangeMin); // генерация случайных целых чисел в диапазоне
+                System.out.println(integerArray[j]);
             }
 
 //        System.out.println(str.replaceAll(".","*"));

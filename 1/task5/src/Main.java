@@ -8,9 +8,7 @@ public class Main {
         str = in.nextLine();
         System.out.println("password");
         str2 = in.nextLine();
-        System.out.println("login:" + str);
-        System.out.println(str2.replaceAll(".","*"));
-
-
+        System.out.println("login: " + str);
+        System.out.println("password: " + str2.replaceAll(".","*"));
     }
 }
