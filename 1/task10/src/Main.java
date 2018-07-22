@@ -10,7 +10,6 @@ public class Main {
         Scanner scan = new Scanner(fr);
         int i = 1;
         while (scan.hasNextLine()) {
-            System.out.println(scan.nextLine());
             i++;
             FileWriter fw = new FileWriter("file2.txt");
             Scanner in = new Scanner(System.in);
@@ -19,18 +18,17 @@ public class Main {
             if (scan.nextLine().contains(str)) {
                 String temp = "";
                 for (Character a : str.toCharArray()) {
-                    if (str.contains(a.toString()) && !temp.contains(a.toString())) {
+                    if (str.contains(a.toString())) {
                         temp = temp + a.toString();
                     }
                 }
                 for (char a : temp.toCharArray()) {
-                    System.out.print(a + " ");
-                    //fw.write();
+                    fw.write(a);
 
                 }
                 fr.close();
                 fw.close();
             }
         }
-    }
-
+            }
+        }
