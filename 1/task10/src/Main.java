@@ -7,28 +7,30 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         FileReader fr = new FileReader("file.txt");
+        Scanner in = new Scanner(System.in);
         Scanner scan = new Scanner(fr);
         int i = 1;
         while (scan.hasNextLine()) {
             i++;
             FileWriter fw = new FileWriter("file2.txt");
-            Scanner in = new Scanner(System.in);
             String str;
             str = in.nextLine().trim();
-            if (scan.nextLine().contains(str)) {
-                String temp = "";
-                for (Character a : str.toCharArray()) {
-                    if (str.contains(a.toString())) {
-                        temp = temp + a.toString();
+            {
+                if (scan.nextLine().contains(str)) {
+                    String temp = "";
+                    for ( Character a : str.toCharArray() ) {
+                        if (str.contains(a.toString()) && !temp.contains(a.toString())) {
+                            temp = temp + a.toString();
+                        }
+                    }
+                    for (char a: temp.toCharArray() ) {
+                        fw.write(a);
                     }
                 }
-                for (char a : temp.toCharArray()) {
-                    fw.write(a);
+            }
+            fr.close();
+            fw.close();
+        }
+    }
+}
 
-                }
-                fr.close();
-                fw.close();
-            }
-        }
-            }
-        }
